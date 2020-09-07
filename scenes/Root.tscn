@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Root.jsx" type="Script" id=3]
+[ext_resource path="res://scripts/ToggleButton.jsx" type="Script" id=4]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 394.12, 250.033 )
+
+[node name="Wall" parent="." instance=ExtResource( 2 )]
+position = Vector2( 399.448, 445.368 )
+rotation = 0.743102
+scale = Vector2( 5.98204, 0.9375 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+margin_right = 146.0
+margin_bottom = 34.0
+text = "T O G G L E"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
